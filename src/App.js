@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import Home from './Home.js';
+import MapViewer from './MapViewer.js';
 
-class App extends Component {
+class App extends Component{
+
   render() {
     return (
-      <div className="App">
-        <h1>Hello</h1>
-      </div>
+      <BrowserRouter>
+        <main>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/view-map/:id" component={MapViewer} />
+            <Route component={() => <Redirect to="/"/>} />
+          </Switch>
+        </main>
+      </BrowserRouter>
     );
   }
 }

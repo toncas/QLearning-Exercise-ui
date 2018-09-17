@@ -1,0 +1,14 @@
+.map-viewer-cell {
+  border: 0.5px solid grey;
+  height: 110px;
+  width: 110px;
+  display: inline-block;
+}
+
+.map-grid_false {
+  background-color: gray;
+}
+
+.exit {
+  background-color: green;
+}
